@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Producto</title>
+</head>
+<body>
+    <h1>Información sobre el producto</h1>
+
+    <form>
+        <h2>Datos básicos</h2>
+        Nombre:<br>
+        <input type="text" name="nombre" required><br><br>
+
+        Descripción:<br>
+        <textarea name="descripcion" required></textarea><br><br>
+
+        Foto:<br>
+        <input type="file" name="foto"><br><br>
+
+        <input type="checkbox" name="contador">
+        Añadir contador de visitas<br><br>
+
+        <h2>Datos económicos</h2>
+        Precio (ej: 19,99):<br>
+        <input 
+            type="text" 
+            name="precio" 
+            pattern="^\d+,\d{2}$" 
+            title="Usa coma y dos decimales, como 10,50"
+            required
+        > €<br><br>
+
+        Impuestos:<br>
+        <select name="impuestos" required>
+            <option value="">-- Elige --</option>
+            <option value="4">4%</option>
+            <option value="7">7%</option>
+            <option value="16">16%</option>
+            <option value="25">25%</option>
+        </select><br><br>
+
+        Promoción:<br>
+        <input type="radio" name="promocion" value="ninguno" checked> Ninguno<br>
+        <input type="radio" name="promocion" value="transporte"> Transporte gratuito<br>
+        <input type="radio" name="promocion" value="descuento"> Descuento 5%<br><br>
+
+        <input type="submit" value="Guardar producto">
+        <input type="reset" value="Borrar todo">
+    </form>
+</body>
+</html>
