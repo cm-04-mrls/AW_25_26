@@ -1,0 +1,114 @@
+
+.contenedor {
+  position: relative;  
+  width: 100%;
+  height: 150px;
+  border: 1px dashed #999; 
+  margin-bottom: 20px;
+}
+
+
+.caja {
+  text-align: center;
+  font-weight: bold;
+  line-height: 100px;
+  margin: 5px;
+}
+
+/* Caja 1 */
+.caja1 {
+  background-color: blue;
+  border: 2px solid gray;
+  width: 50%;
+  height: 100px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+/* Caja 2 */
+.caja2 {
+  background-color: lightyellow;
+  width: 20%;
+  height: 50px;
+  line-height: 50px;
+  color: black;
+}
+
+/* Caja 3 */
+.caja3 {
+  background-color: lightcoral;
+  border: 1px double black;
+  width: 20%;
+  height: 50px;
+  line-height: 50px;
+  color: white;
+}
+
+
+#ca1, #ca2, #ca3 {
+  float: left;
+}
+#ca3 {
+  clear: left;
+}
+
+#cb1, #cb2, #cb3 {
+  float: right;
+}
+
+#cc1 
+{ float: left;
+
+}
+#cc2 
+{ float: right; 
+
+}
+#cc3 
+{ clear: both; 
+  
+}
+
+
+#cd1 
+{ position: relative; left: 50px; 
+
+}
+#cd2 
+{ position: relative; top: 20px; 
+
+}
+#cd3 
+{ position: relative; left: -30px; 
+
+}
+
+
+#ce1 
+{ position: absolute; top: 0; left: 0; 
+
+}
+#ce2 
+{ position: absolute; top: 0; right: 0; 
+
+}
+#ce3 
+{ position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); 
+
+}
+
+
+#cf1 
+{ position: fixed; top: 10px; left: 10px; 
+
+}
+#cf2 
+{ position: fixed; top: 10px; right: 10px;
+
+}
+#cf3 
+{ position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); 
+
+}
+
