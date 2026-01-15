@@ -1,20 +1,23 @@
-name: Deploy a AwardSpace
+name: Deploy to AwardSpace
+
 on:
   push:
     branches:
       - main
+
 jobs:
-  deploy:
+  ftp-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          # IMPORTANTE: Cambia esto por tu carpeta real
-          server-dir: /apw2smx.atwebpages.com/
-          port: 22
-            **/wp/**
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: FTP Deploy
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: /apw2smx.atwebpages.com/
+        
