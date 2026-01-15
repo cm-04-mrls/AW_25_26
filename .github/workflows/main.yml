@@ -15,6 +15,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           # IMPORTANTE: Cambia esto por tu carpeta real
-          server-dir: apw2smx.atwebpages.com/
+          server-dir: /apw2smx.atwebpages.com/
+          local-dir: ./
           exclude: |
             **/wp/**
