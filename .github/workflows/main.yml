@@ -16,4 +16,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           # IMPORTANTE: Cambia esto por tu carpeta real
           server-dir: /apw2smx.atwebpages.com/
+          port: 22
             **/wp/**
